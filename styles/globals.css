@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+button, a {
+  transition: all 0.2s ease-in-out;
+}
+select {
+  transition: all 0.2s ease-in-out;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

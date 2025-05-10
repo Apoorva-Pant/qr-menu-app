@@ -1,4 +1,3 @@
-
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import MenuItem from './MenuItem';
@@ -26,19 +25,20 @@ export default function CategoryTile({ category }) {
         onClick={() => setExpanded(!expanded)}
       >
         <h2 className="text-lg font-bold">{category.name}</h2>
-        <span>
-          <span
-            className={`transform transition-transform duration-300 border-solid border-l-2 border-b-2 border-base-content w-2 h-2 inline-block ${
-              expanded ? 'rotate-180' : 'rotate-0'
-            }`}
-            style={{ transformOrigin: 'center' }}
-          ></span>
+
+        {/* Clean Up/Down Arrow */}
+        <span
+          className={`transform transition-transform duration-300 inline-block ${
+            expanded ? 'rotate-180' : 'rotate-0'
+          }`}
+        >
+          ▲
         </span>
       </div>
 
       {expanded && (
         <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {category.item.map((item, index) => (
+          {category.item.map((item) => (
             <MenuItem key={item.id} item={item} />
           ))}
         </div>

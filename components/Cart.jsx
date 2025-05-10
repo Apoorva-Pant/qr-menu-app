@@ -18,15 +18,18 @@ export default function Cart() {
           >
             <div>
               <h2 className="text-lg font-bold">🍽️ {item.name}</h2>
+              <p>Size: {item.size}</p>
               <p>Qty: {item.quantity}</p>
               <p>Price: ₹ {item.price}</p>
-              <p>Total: ₹ {item.price * item.quantity}</p>
+              <p className="font-semibold">
+                Total: ₹ {item.price * item.quantity}
+              </p>
             </div>
             <button
               onClick={() => removeFromCart(index)}
               className="btn btn-error btn-sm"
             >
-              Remove ❌
+              ❌ Remove
             </button>
           </div>
         ))
@@ -34,10 +37,11 @@ export default function Cart() {
 
       {cart.length > 0 && (
         <div className="mt-6 text-xl font-bold text-center">
-          Grand Total: ₹ {total}
+          🧾 Grand Total: ₹ {total}
         </div>
       )}
     </div>
   );
 }
+
 

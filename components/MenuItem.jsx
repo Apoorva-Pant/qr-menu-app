@@ -9,6 +9,19 @@ export default function MenuItem({ item }) {
 
   const isAvailable = item.available !== false;
   const selectedPrice = item.price?.[size];
+ function showToast(message) {
+  const toast = document.createElement("div");
+  toast.className = "toast toast-top toast-end";
+  toast.innerHTML = `
+    <div class="alert alert-success">
+      <span>✅ ${message}</span>
+    </div>`;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    document.body.removeChild(toast);
+  }, 1500);
+}
 
   return (
     <div
@@ -33,16 +46,23 @@ export default function MenuItem({ item }) {
         </select>
       </div>
 
+      {/* Price */}
       <p className="mb-2 font-semibold">Price: ₹ {selectedPrice}</p>
 
+      {/* Add to Cart */}
       <button
         disabled={!isAvailable}
-        className="btn btn-primary btn-sm"
-        onClick={() => addToCart(item, size)}
+        className={`btn btn-primary btn-sm ${
+          !isAvailable ? "btn-disabled" : ""
+        }`}
+     onClick={() => {
+  addToCart(item, size);
+  showToast(`${item.name} added to cart!`);
+}}
+
       >
         {isAvailable ? "Add to Cart" : "Unavailable"}
       </button>
     </div>
   );
 }
-
