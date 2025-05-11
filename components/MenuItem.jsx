@@ -57,7 +57,6 @@ export default function MenuItem({ item }) {
         }`}
      onClick={() => {
   addToCart(item, size);
-  showToast(`${item.name} added to cart!`);
 }}
 
       >

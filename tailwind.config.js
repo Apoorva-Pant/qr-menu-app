@@ -1,4 +1,4 @@
-import daisyui from 'daisyui'
+  import daisyui from 'daisyui'
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -12,7 +12,7 @@ const config = {
   },
   plugins: [daisyui],
    daisyui: {
-    themes: ["light", "cupcake"],
+    themes: ["coffee", "cupcake"],
 }
 }
 export default config

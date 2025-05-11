@@ -1,6 +1,9 @@
 import "../styles/globals.css";
 import Navbar from "../components/Navbar";
 import { CartProvider } from "../context/CartContext";
+import { Cinzel } from 'next/font/google';
+const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
+
 
 export const metadata = {
   title: "My Menu App",
@@ -10,12 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     <body className="bg-base-100 text-base-content bg-[url('/coffee-bg.jpg')] bg-cover bg-center min-h-screen">
-        <CartProvider>
-          <Navbar />
-          <main className="p-4">{children}</main>
-        </CartProvider>
-      </body>
+  <body className={`${cinzel.className} bg-[url('/coffee-bg.jpg')] bg-cover bg-center min-h-screen`}>
+  <CartProvider>
+    <Navbar />
+    <main className="pt-24 px-4">{children}</main>
+  </CartProvider>
+</body>
+
     </html>
   );
 }
