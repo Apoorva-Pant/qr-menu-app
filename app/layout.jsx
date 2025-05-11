@@ -13,10 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-  <body className={`${cinzel.className} bg-[url('/coffee-bg.jpg')] bg-cover bg-center min-h-screen`}>
+  <body className={`${cinzel.className} bg-[url('/coffee-bg.jpg')] bg-cover bg-center bg-fixed min-h-screen`}>
   <CartProvider>
     <Navbar />
-    <main className="pt-24 px-4">{children}</main>
+   <main className="pt-24 min-h-screen px-4 bg-transparent">
+  {children}
+</main>
   </CartProvider>
 </body>
 

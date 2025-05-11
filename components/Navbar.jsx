@@ -10,7 +10,7 @@ export default function Navbar() {
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="navbar bg-base-200 fixed top-0 left-0 w-full z-50 shadow-md px-4">
+   <div className="navbar bg-base-200/80 backdrop-blur-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center w-full">
         {pathname === "/cart" ? (
           <Link href="/" className="btn btn-ghost text-sm">
