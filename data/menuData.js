@@ -2,8 +2,8 @@ export const categories = [
  {
     name: "Hot Coffee",
     item: [
-      { id: 1, name: "Espresso (30ml)", price: { small: 100 }, available: true },
-      { id: 2, name: "Double Espresso (Dopio 60ml)", price: { small: 100 }, available: true },
+      { id: 1, name: "Espresso (30ml)", price: { small: 100, large: 150 }, available: true },
+      { id: 2, name: "Double Espresso (Dopio 60ml)", price: { small: 100, large:150 }, available: true },
       { id: 3, name: "Americano (Black coffee)", price: { small: 100, large: 150 }, available: true },
       { id: 4, name: "Latte", price: { small: 100, large: 150 }, available: true },
       { id: 5, name: "Cappuccino", price: { small: 100, large: 150 }, available: true },
@@ -22,9 +22,9 @@ export const categories = [
   {
     name: "Iced Coffee",
     item: [
-      { id: 16, name: "Iced Espresso", price: { small: 100 }, available: true },
-      { id: 17, name: "Iced Dopio", price: { small: 100 }, available: true },
-      { id: 18, name: "Iced Americano", price: { small: 100 }, available: true },
+      { id: 16, name: "Iced Espresso", price: { small: 100, large: 150 }, available: true },
+      { id: 17, name: "Iced Dopio", price: { small: 100, large: 150 }, available: true },
+      { id: 18, name: "Iced Americano", price: { small: 100, large: 150}, available: true },
       { id: 19, name: "Coffee Cran", price: { small: 130, large: 180 }, available: true },
       { id: 20, name: "Coffee Sunrise", price: { small: 130, large: 180 }, available: true },
       { id: 21, name: "Iced Latte", price: { small: 130, large: 180 }, available: true },
@@ -95,8 +95,8 @@ export const categories = [
    {
     name: "Mocktails",
     item: [
-      { id: 64, name: "Bull Breeze", price: { small: 300 }, available: true },
-      { id: 65, name: "Shirley Temple", price: { small: 300 }, available: true },
+      { id: 64, name: "Bull Breeze", price: { small: 300, large: 500 }, available: true },
+      { id: 65, name: "Shirley Temple", price: { small: 300, large: 500 }, available: true },
       { id: 66, name: "Virgin Mojito", price: { small: 130, large: 175 }, available: true },
       { id: 67, name: "Blood Hound", price: { small: 130, large: 175 }, available: true },
       { id: 68, name: "Orange Fashion", price: { small: 130, large: 175 }, available: true },
@@ -117,7 +117,7 @@ export const categories = [
   {
     name: "Iced Tea",
     item: [
-      { id: 76, name: "Red Bull Iced Tea", price: { small: 300 }, available: true },
+      { id: 76, name: "Red Bull Iced Tea", price: { small: 300, large: 500 }, available: true },
       { id: 77, name: "Classic Lemon", price: { small: 130, large: 175 }, available: true },
       { id: 78, name: "Peach", price: { small: 130, large: 175 }, available: true },
       { id: 79, name: "Strawberry", price: { small: 130, large: 175 }, available: true },
