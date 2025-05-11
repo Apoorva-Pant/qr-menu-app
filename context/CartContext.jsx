@@ -16,7 +16,7 @@ function showToast(message) {
   document.body.appendChild(toast);
 
   // Set the toast to show above the navbar (adjust as needed for your navbar height)
-  toast.style.top = "70px"; // Adjust to match your navbar height
+  toast.style.top = "400px"; // Adjust to match your navbar height
 
   setTimeout(() => {
     document.body.removeChild(toast);

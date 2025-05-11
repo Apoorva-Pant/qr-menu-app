@@ -9,7 +9,9 @@ export default function Cart() {
   return (
     <div>
       {cart.length === 0 ? (
-        <p className="text-center text-lg mt-10">🛒 Your cart is empty!</p>
+        <p className="text-center text-lg py-8 bg-white/30 backdrop-blur-sm rounded-lg shadow">
+  Your cart is empty.
+</p>
       ) : (
         cart.map((item, index) => (
           <div
@@ -27,9 +29,10 @@ export default function Cart() {
             </div>
             <button
               onClick={() => removeFromCart(index)}
-              className="btn btn-error btn-sm"
+                className="text-red-600 hover:text-red-800 text-xl sm:text-lg px-2 py-1 rounded-full ml-auto"
+                title="Remove"
             >
-              ❌ Remove
+              ❌
             </button>
           </div>
         ))

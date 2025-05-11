@@ -57,11 +57,12 @@ export default function CategoryTile({ category }) {
           expanded ? 'max-h-[1000px] opacity-100 mt-2' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {category.item.map((item) => (
-            <MenuItem key={item.id} item={item} />
-          ))}
-        </div>
+       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white/70 backdrop-blur-md p-2 rounded-md">
+  {category.item.map((item) => (
+    <MenuItem key={item.id} item={item} />
+  ))}
+</div>
+
       </div>
     </div>
   );

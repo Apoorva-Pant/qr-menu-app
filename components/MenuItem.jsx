@@ -24,11 +24,12 @@ export default function MenuItem({ item }) {
 }
 
   return (
-    <div
-      className={`border p-4 rounded-lg mb-4 ${
-        !isAvailable ? "opacity-50 pointer-events-none" : ""
-      }`}
-    >
+   <div
+  className={`border p-4 rounded-lg mb-4 backdrop-blur-md bg-white/40 shadow-md ${
+    !isAvailable ? "opacity-50 pointer-events-none" : ""
+  }`}
+>
+
       <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
 
       <div className="flex items-center gap-2 mb-2">
